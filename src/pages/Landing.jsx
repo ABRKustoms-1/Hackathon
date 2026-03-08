@@ -1,4 +1,4 @@
-import useReveal from "../hooks/useReveal";
+import useReveal from "../components/hooks/useReveal";
 import { INDUSTRIES, CASE_STUDIES } from "../constants/data";
 import MarqueeStrip from "../components/ui/MarqueeStrip";
 
