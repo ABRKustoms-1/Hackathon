@@ -1,0 +1,61 @@
+ --- Core Keyframes --- */
+
+/* Smoothly lifts and fades in content */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Simple fade for overlays */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* The "Organic" movement for background orbs */
+@keyframes floatOrb {
+  0%, 100% { transform: translate(0,0) scale(1); }
+  33% { transform: translate(30px,-20px) scale(1.08); }
+  66% { transform: translate(-20px,15px) scale(0.96); }
+}
+
+/* Infinite horizontal scroll for the top bar */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Pulsing effect for the logo and alerts */
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37,99,235,0.5); }
+  50% { box-shadow: 0 0 0 8px rgba(37,99,235,0); }
+}
+
+/* --- Animation Utility Classes --- */
+
+.animate-fade-up {
+  animation: fadeUp 0.7s cubic-bezier(.22,1,.36,1) both;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease both;
+}
+
+/* Scroll Reveal Classes (Used by Person 2's hook) */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(.22,1,.36,1),
+              transform 0.7s cubic-bezier(.22,1,.36,1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delay staggered items (like a grid of cards) */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
