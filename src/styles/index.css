@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@400;500;600;700;800&display=swap');
 
 /* --- Global Resets --- */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+*, *::before, *::after { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
 }
 
 :root {
@@ -17,7 +17,7 @@
   --orange-light: #FB923C;
   --purple: #7C3AED;
   --purple-light: #8B5CF6;
- 
+  
   /* Neutral Palette */
   --white: #FFFFFF;
   --off-white: #F8F8FC;
@@ -28,17 +28,17 @@
   --gray-500: #6B7280;
   --gray-700: #374151;
   --gray-900: #111827;
- 
+  
   /* Gradients & Accents */
   --gradient: linear-gradient(135deg, #2563EB 0%, #7C3AED 50%, #F97316 100%);
   --gradient-soft: linear-gradient(135deg, rgba(37,99,235,0.12) 0%, rgba(124,58,237,0.12) 50%, rgba(249,115,22,0.12) 100%);
- 
+  
   /* Shadows */
   --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
   --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
   --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
   --shadow-xl: 0 20px 60px rgba(0,0,0,0.15);
- 
+  
   /* Border Radii */
   --radius: 16px;
   --radius-sm: 10px;
@@ -46,8 +46,8 @@
 }
 
 /* --- Base Styles --- */
-html {
-  scroll-behavior: smooth;
+html { 
+  scroll-behavior: smooth; 
 }
 
 body {
@@ -56,4 +56,40 @@ body {
   color: var(--gray-900);
   overflow-x: hidden;
   line-height: 1.5;
-  -webkit
+  -webkit-font-smoothing: antialiased;
+  cursor: none; /* Required for the Custom Cursor component */
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { 
+  width: 5px; 
+}
+::-webkit-scrollbar-track { 
+  background: var(--gray-100); 
+}
+::-webkit-scrollbar-thumb { 
+  background: var(--gradient); 
+  border-radius: 99px; 
+}
+
+/* --- Utility Classes --- */
+.grad-text {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 16px;
+  display: block;
+}
+
+.text-center { text-align: center; }
+.mb-48 { margin-bottom: 48px; }
+.w-full { width: 100%; }
